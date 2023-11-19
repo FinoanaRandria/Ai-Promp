@@ -1,26 +1,29 @@
 import '@styles/globals.css'
 
 
+
 export const metadata = {
- title:"Promptopia",
- descritption:"Discover & Share Ai promps"
+    title: "Promptopia",
+    descritption: "Discover & Share Ai promps"
 
 }
 
-const layout = () => {
-  return (
-    <div>
-        <html lang="en">
-            <body>
-                <div classname="main">
-                    <div classname="gradient">
-
+const RootLayout = ({ children }) => {
+    return (
+        
+            <html lang="en">
+                <body>
+                    <div className="main">
+                        <div className="gradient" />
                     </div>
-                </div>
-            </body>
-        </html>
-    </div>
-  )
+                    <main className="app">
+                        {children}
+
+                    </main>
+                </body>
+            </html>
+        
+    )
 }
 
-export default layout
+export default RootLayout

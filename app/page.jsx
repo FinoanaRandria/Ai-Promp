@@ -2,7 +2,17 @@
 
 const Home = () => {
   return (
-    <div>home</div>
+    <section className="w-full flex-col flex-center ">
+       <h1 className="head_text text-center">
+        Discover & Share
+           
+        <br className="max-md:hidden" />
+            <span className="orange_gradient text-center">AI-Powred Promps</span>
+       </h1>
+       <p className="desc text-center">
+         Promptopia is an open-source AI promping tool for morden world to discover , create and share creative prompts
+       </p>
+    </section>
   )
 }
 

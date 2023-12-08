@@ -4,7 +4,10 @@ const Form = ({
 
 }) => {
   return (
-    <div>Form</div>
+    <section className="w-full max-w-full flex-start flex-col">
+       <h1>{type} post</h1>
+
+    </section>
   )
 }
 

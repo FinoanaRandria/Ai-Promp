@@ -47,7 +47,7 @@ const [toggleDropdown,setToggleDropdown]= useState(false)
            <div className="sm:flex hidden">
                  {session?.user ? (
                     <div className="flex gap-3 md:gap-5">
-                            <Link className="black_btn" href="/create-promp">
+                            <Link className="black_btn" href="/create-prompt">
                                Create Post
                             </Link>
 

@@ -49,7 +49,11 @@ const Form = ({
         />
         </label>
 
-        
+          <div>
+            <Link href="/">
+               Cancel
+            </Link>
+          </div>
 
         
         

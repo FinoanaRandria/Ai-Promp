@@ -62,7 +62,7 @@ const Form = ({
 
             "
             >
-             {submitting?'${type}...': type }   
+             {submitting?`${type}...`: type }   
            </button>
 
 

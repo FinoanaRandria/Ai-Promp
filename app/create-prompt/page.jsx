@@ -2,12 +2,17 @@
 
 import {useState} from 'react'
 import { useSession } from 'next-auth/react'
-import { NextRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import Form from '@components/Form'
 
 
 
 const CreatePrompt = () => {
+   const router = useRouter()
+   const {data:session} = useSession()
+  
+   
+
 
    const [submitting,setSubmitting] = useState(false)
    const [post,setPost] = useState({
@@ -42,6 +47,8 @@ const CreatePrompt = () => {
 
        catch (error) {
          console.log(error);
+      }finally{
+         setSubmitting(false)
       }
    }
 

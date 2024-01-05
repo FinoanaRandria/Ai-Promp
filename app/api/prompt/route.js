@@ -1,35 +1,21 @@
 import { connectToDB } from "@utils/database"
 import  Prompt  from "@models/prompt"
 
-//method post 
-export const POST = async (req, res) => {
-    const { userId, prompt, tag } = await req.json()
 
+ export const GET = async(request)=> {
+  try {
+    await connectToDB()
 
-    console.log(prompt);
+    const prompts = await Prompt.find({}).populate('creator');
 
+    return new Response(JSON.stringify(prompts), {
+        status:200
+    })
+  } catch (error) {
 
-    try {
-
-        await connectToDB()
-        //create pormpt wiht schema
-        const newPrompt = new Prompt({
-            creator: userId,
-            prompt,
-            tag
-        })
-        //save prompt 
-        await newPrompt.save()
-
-        return new Response(JSON.stringify(newPrompt), {
-            status: 201,
-
-        })
-
-    } catch (error) {
-        return new Response('Error created post', { status: 500 })
-    }
+    return new Response("failed to fetch all prompts", {
+        status:500
+  })
 
 }
-
-
+}

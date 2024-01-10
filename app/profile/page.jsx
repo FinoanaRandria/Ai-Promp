@@ -9,7 +9,7 @@ import Profile from '@components/Profile'
 
 
 
-const Profile = () => {
+const MyProfile = () => {
     
   const handleEdit=()=>{
 
@@ -32,4 +32,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default MyProfile

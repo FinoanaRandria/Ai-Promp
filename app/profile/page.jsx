@@ -7,12 +7,26 @@ import { useRouter } from 'next/navigation'
 
 import Profile from '@components/Profile'
 
+
+
 const Profile = () => {
+    
+  const handleEdit=()=>{
+
+  }
+
+  const handleDelete=  async ()=>{
+
+  }
   return (
     <>
     
     <Profile
-     name={session.user.name}
+     name="My"
+     desc="Welcome to your personalized page"
+     data={[]}
+     handleEdit={handleEdit}
+     handleDelete={handleDelete}
     />
     </>
   )

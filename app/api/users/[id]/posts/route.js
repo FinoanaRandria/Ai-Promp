@@ -13,7 +13,7 @@ export const GET = async(request,{params})=>{
       }).populate('creator')
 
 
-     return new Response(JSON.stringify(prompt, {
+     return new Response(JSON.stringify(prompts, {
          status:200
      }))
     } catch(error){

@@ -6,11 +6,28 @@ const Profile = ({name,data,handleDelete,handleEdit,desc}) => {
       <section className="w-full">
          
           <h1 className="head_text text-left">
-             {name} Profile
+             {name} <span className="blue_gradient">
+                  Profile
+              </span>
           </h1>
         
+               <p className="desc text-left">{desc}</p>
 
-      </section>
+
+               <div className="mt-10 prompt_layout">
+                    { data.map((post)=>(
+                         
+                         <PromptCard
+                          key={post._id}
+                          post={post}
+                          handleEdit={()=>handleEdit && handleEdit([post]) }
+                         />
+                
+                    ))
+                       
+                    }
+               </div>
+      </section> 
     </>
   )
 }
